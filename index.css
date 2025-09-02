@@ -1,23 +1,24 @@
 * {
   margin: 0;
   box-sizing: border-box;
+  list-style: none;
+  padding: 0;
 }
 
 input, button {
   font: inherit;
 }
 
-div {
+/* div {
   border: 1px solid red;
-}
+} */
 
 #main-grid {
   min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr 4fr;
-  grid-template-rows: 1fr 3fr;
+  grid-template-rows: 183px 4fr;
   font-family: "Inter Tight", sans-serif;
-  
 }
 
 #dashboard {
@@ -58,7 +59,13 @@ div {
 }
 
 .header {
-  padding: 20px 40px;
+  padding: 15px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0px 6px 4px -1px rgba(0,0,0,0.14);
+  position: relative;
+  z-index: 1;
 }
 
 .header__top {
@@ -139,23 +146,108 @@ input[type="search"] {
 }
 
 
-#main-content {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
+.main-content {
+  display: flex;
+  gap: 30px;
+  background-color: #e1e8f0;
+  padding: 35px 30px 50px 0px;
 }
 
-#right {
+.main-content__left {
   display: grid;
   grid-template-rows: 1fr 20fr;
+  padding: 0 15px 0 43px;
+  flex: 6;
 }
 
-#left {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
+.main-content__right {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  gap: 35px;
+}
+
+.content__title {
+  font-size: 22px;
+  font-weight: 600;
 }
 
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 30px;
+  gap: 25px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 35px 30px;
+  border-left: 10px solid purple;
+  border-radius: 7px;
+  box-shadow: 8px 6px 7px -3px rgba(0,0,0,0.19);
+  background-color: white;
+  justify-content: space-between;
+}
+
+.grey {
+  color: #575656;
+  padding-top: 5px;
+}
+
+.card-icons { 
+  display: flex;
+  gap: 15px;
+  justify-content: end;
+
+}
+
+.card__title {
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+
+.bold {
+  font-weight: bold;
+  color: black;
+}
+
+.announcements, .trending {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.announcement__card, .trending__card {
+  background-color: white;
+  padding: 20px 10px;
+  width: 280px;
+  border-radius: 7px;
+  box-shadow: 8px 6px 7px -3px rgba(0, 0, 0, 0.19);
+  padding: 25px 23px;
+}
+
+.main-content__right ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.sm-text {
+  font-size: 13px;
+}
+
+.announcement__card > ul div {
+  border-bottom: 1.5px solid #d9d9d9;
+  width: 230px;
+}
+
+.trending__card li {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+} 
+
+.user {
+  font-weight: 600;
 }
