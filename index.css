@@ -9,10 +9,6 @@ input, button {
   font: inherit;
 }
 
-/* div {
-  border: 1px solid red;
-} */
-
 #main-grid {
   min-height: 100vh;
   display: grid;
@@ -22,7 +18,7 @@ input, button {
 }
 
 #dashboard {
-  background-color: rgb(99, 99, 203);
+  background-color: #6363cb;
   grid-row: 1 / 3;
   color: white;
   display: flex;
@@ -39,6 +35,7 @@ input, button {
   display: flex;
   gap: 12px;
   align-items: center;
+  text-shadow: 5px 0px 0px rgba(53,24,81,0.84);
 }
 
 #dashboard h2 img {
@@ -56,7 +53,8 @@ input, button {
 
 #dashboard li:hover {
   cursor: pointer;
-  color: rgb(53, 24, 81);
+  color: #351851;
+  font-weight: 550;
 }
 
 .icon {
@@ -69,7 +67,7 @@ input, button {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  box-shadow: 0px 6px 4px -1px rgba(0,0,0,0.14);
+  box-shadow: 0px 6px 4px -1px #00000024;
   position: relative;
   z-index: 1;
 }
@@ -101,8 +99,12 @@ input[type="search"] {
   height: 30px;
   border-radius: 20px;
   border: none;
-  background-color: #e1e8f0;
-  border: 2px solid rgb(98, 45, 128);
+  background-color: #efe5f8;
+  border: 1.5px solid #816293;
+}
+
+.header__top img {
+  cursor: pointer;
 }
 
 .header__down {
@@ -125,15 +127,18 @@ input[type="search"] {
 }
 
 .header__down > ul > li {
-  background-color: rgb(99, 99, 203);
+  background-color: #6363cb;
   padding: 11px 28px;
   border-radius: 20px;
+  color: white;
+  font-weight: 500;
 }
 
 .header__down > ul > li:hover {
-  background-color: rgb(149, 149, 196);
-  color: white;
+  background-color: #9595c4;
+  color: rgb(53, 24, 81);
   cursor: pointer;
+  font-weight: 600;
 }
 
 .profile-name {
@@ -152,11 +157,10 @@ input[type="search"] {
   height: 80px; 
 }
 
-
 .main-content {
   display: flex;
   gap: 30px;
-  background-color: #e1e8f0;
+  background-color: #efe5f8;
   padding: 35px 0px 50px 0px;
 }
 
@@ -177,6 +181,7 @@ input[type="search"] {
 .content__title {
   font-size: 22px;
   font-weight: 600;
+  color: #43175c;
 }
 
 .cards {
@@ -189,9 +194,9 @@ input[type="search"] {
   display: flex;
   flex-direction: column;
   padding: 35px 30px;
-  border-left: 10px solid rgb(98, 45, 128);
+  border-left: 10px solid #622d80;
   border-radius: 7px;
-  box-shadow: 8px 6px 7px -3px rgba(0,0,0,0.19);
+  box-shadow: 8px 6px 7px -3px #00000030;
   background-color: white;
   justify-content: space-between;
 }
@@ -199,6 +204,9 @@ input[type="search"] {
 .card:hover {
   cursor: pointer;
   background-color: #9595c4;
+  div > p:nth-child(2) {
+    color: #000000;
+  }
 }
 
 .grey {
@@ -211,6 +219,12 @@ input[type="search"] {
   gap: 15px;
   justify-content: end;
 
+}
+
+.card-icons > img:hover {
+  background-color: #585874;
+  border-radius: 50%;
+  padding: 5px;
 }
 
 .card__title {
@@ -234,7 +248,7 @@ input[type="search"] {
   padding: 20px 10px;
   width: 280px;
   border-radius: 7px;
-  box-shadow: 8px 6px 7px -3px rgba(0, 0, 0, 0.19);
+  box-shadow: 8px 6px 7px -3px #00000030;
   padding: 25px 23px;
 }
 
@@ -264,14 +278,11 @@ input[type="search"] {
   cursor: pointer;
   background-color: #9595c4;
   border-radius: 10px;
+  p:nth-child(2) {
+    color: white;
+  }
 }
 
 .user {
   font-weight: 600;
-}
-
-.card-icons > img:hover {
-  background-color: #585874;
-  border-radius: 50%;
-  padding: 5px;
 }
